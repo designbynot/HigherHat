@@ -1,0 +1,87 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: #ffffff; /* White background for container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333; /* Darker text color */
+}
+
+.btn {
+  background-color: #000; /* Black button background */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 20px; /* Pill-shaped buttons */
+}
+
+.btn:hover {
+  background-color: #333; /* Darker button background on hover */
+}
+
+input[type="file"] {
+  display: none;
+}
+
+canvas {
+  border: 1px solid #ddd; /* Light gray border */
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333; /* Darker text color */
+}
+
+.controls input[type="range"] {
+  width: 200px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #333; /* Darker text color */
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+}
