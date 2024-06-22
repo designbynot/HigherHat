@@ -9,8 +9,12 @@ function loadImage(event) {
     reader.onload = function() {
         img = new Image();
         img.onload = function() {
-            canvas.width = img.width;
-            canvas.height = img.height;
+            // Set maximum dimensions for the canvas
+            let maxWidth = window.innerWidth * 0.8;
+            let maxHeight = window.innerHeight * 0.8;
+            let ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
+            canvas.width = img.width * ratio;
+            canvas.height = img.height * ratio;
             draw();
         }
         img.src = reader.result;
@@ -27,7 +31,7 @@ function adjustHat() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if (img) ctx.drawImage(img, 0, 0);
+    if (img) ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     if (hat) ctx.drawImage(hat, imgX, imgY, hat.width * imgScale, hat.height * imgScale);
 }
 
